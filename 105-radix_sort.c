@@ -70,7 +70,7 @@ void radix_sort(int *array, size_t size)
 	unsigned int i;
 	int max_value = array[0];
 
-	if (array == NULL || size < 2)
+	if (!array || size < 2)
 		return;
 
 	for (i = 1; i < size; i++)

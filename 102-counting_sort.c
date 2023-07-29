@@ -13,6 +13,9 @@ void counting_sort(int *array, size_t size)
 	unsigned int i, temp, key = array[0];
 	int *count_array, *sorted_array;
 
+	if (!array || size < 2)
+		return;
+
 	for (i = 1; i < size; i++)
 		key = key > (unsigned int)array[i] ? key : (unsigned int)array[i];
 
