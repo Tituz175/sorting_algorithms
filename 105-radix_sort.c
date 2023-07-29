@@ -68,10 +68,12 @@ void count_sort(int *array, size_t size, int index)
 void radix_sort(int *array, size_t size)
 {
 	unsigned int i;
-	int max_value = array[0];
+	int max_value;
 
 	if (!array || size < 2)
 		return;
+
+	max_value = array[0];
 
 	for (i = 1; i < size; i++)
 		max_value = max_value > array[i] ? max_value : array[i];
